@@ -1,0 +1,8 @@
+.cards__card {
+  box-sizing: border-box;
+  border-radius: 10px;
+  max-width: 282px;
+  max-height: 361px;
+  display: flex;
+  flex-direction: column;
+}

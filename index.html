@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="mesto">
+  <meta name="keywords" content="HTML5, CSS3, Flex, Gridlayout, Form">
+  <meta name="author" content="Andrey Sydor">
+	<link rel="stylesheet" href="./pages/index.css">
+	<title>Mesto</title>
+</head>
+
+<body class= "page">
+
+  <header class="header">
+    <img src="./images/logo/logo.svg" alt="лого" class="header__logo">
+    <div class="header__border">
+    </div>
+  </header>
+
+  <main class="content">
+
+    <section class="popup">
+      <div class="popup__container">
+        <h1 class="popup__title">Редактировать профиль</h1>
+        <form action="#" class="form">
+          <button class="form__button-closed"></button>
+          <label for="name"></label>
+          <input type="text" class="form__text" id="name" name="name" placeholder="Жак-Ив Кусто" required>
+          <label for="description"></label>
+          <input type="text" class="form__text" id="description" name="description" placeholder="Исследователь океана" required>
+          <input type="submit" class="form__button" value="Сохранить">
+        </form>
+      </div>
+    </section>
+
+    <section class="profile">
+      <div class="profile__info">
+        <img src="./images/profile/avatar.png" alt="аватарка" class="profile__avatar">
+        <div class="profile__text">
+          <h2 class="profile__name">Жак-Ив Кусто<button class="profile__button-edit"></button></h2>
+          <p class="profile__description">Исследователь океана</p>
+        </div>
+      </div>
+      <button class="profile__button-add">
+        <img src="./images/profile/button-add.svg" alt="кнопка" class="profile__plus">
+      </button>
+    </section>
+
+    <section class="cards">
+      <div class="cards__card">
+        <img src="./images/cards/karachev.png" alt="Карачевск" class="cards__image">
+        <div class="cards__bottom-panel">
+          <h2 class="cards__name">Карачевск</h2>
+          <button class="cards__button cards__button_active"></button>
+        </div>
+      </div>
+      <div class="cards__card">
+        <img src="./images/cards/elbrus.png" alt="Гора Эльбрус" class="cards__image">
+        <div class="cards__bottom-panel">
+          <h2 class="cards__name">Гора Эльбрус</h2>
+          <button class="cards__button"></button>
+        </div>
+      </div>
+      <div class="cards__card">
+        <img src="./images/cards/dombay.png" alt="Домбай" class="cards__image">
+        <div class="cards__bottom-panel">
+          <h2 class="cards__name">Домбай</h2>
+          <button class="cards__button"></button>
+        </div>
+      </div>
+      <div class="cards__card">
+        <img src="./images/cards/elbrus.png" alt="Гора Эльбрус" class="cards__image">
+        <div class="cards__bottom-panel">
+          <h2 class="cards__name">Гора Эльбрус</h2>
+          <button class="cards__button"></button>
+        </div>
+      </div>
+      <div class="cards__card">
+        <img src="./images/cards/dombay.png" alt="Домбай" class="cards__image">
+        <div class="cards__bottom-panel">
+          <h2 class="cards__name">Домбай</h2>
+          <button class="cards__button"></button>
+        </div>
+      </div>
+      <div class="cards__card">
+        <img src="./images/cards/karachev.png" alt="Карачевск" class="cards__image">
+        <div class="cards__bottom-panel">
+          <h2 class="cards__name">Карачаево-Чувашия</h2>
+          <button class="cards__button"></button>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__title">&copy; 2020 Mesto Russia by Andrey Sydor</p>
+  </footer>
+</body>
+</html>

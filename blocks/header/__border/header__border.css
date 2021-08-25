@@ -1,0 +1,13 @@
+.header__border {
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #545454;
+  opacity: .7;
+}
+
+@media screen and (max-width: 580px) {
+  .header__border {
+    height: 31.6px;
+  }
+}

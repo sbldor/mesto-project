@@ -1,0 +1,19 @@
+.cards__button {
+  background-color: rgba(0, 0, 0, .0);
+  background-image: url(../../../images/cards/like.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 30px;
+  margin-left: 20px;
+  width: 22px;
+  height: 19px;
+  border: 0;
+  transition: background-image, opacity .3s ease;
+}
+
+.cards__button:hover {
+  opacity: .5;
+}

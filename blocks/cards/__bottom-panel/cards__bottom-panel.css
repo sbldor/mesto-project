@@ -1,0 +1,11 @@
+.cards__bottom-panel {
+  border-radius: 0 0 10px 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  height: 79px;
+  margin: 0;
+  padding: 0;
+}

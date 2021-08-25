@@ -1,0 +1,28 @@
+.form__button-closed {
+  border: 0;
+  background-image: url(../../../images/form/close-form.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, .0);
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: -40px;
+  right: -40px;
+  transition: opacity .3s ease;
+  padding: 0;
+}
+
+.form__button-closed:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 619px) {
+ .form__button-closed {
+    width: 20px;
+    height: 20px;
+    top: -36px;
+    right: 0;
+  }
+}

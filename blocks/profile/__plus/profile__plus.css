@@ -1,0 +1,11 @@
+.profile__plus {
+  background-color: #000;
+  margin: 0;
+}
+
+@media screen and (max-width: 619px) {
+  .profile__plus {
+    width: 16px;
+    height: 16px;
+  }
+}
