@@ -3,20 +3,21 @@
   border: 0;
   width: 358px;
   margin: 0 auto;
-  height: 40px;
+  padding-top: 11.5px;
+  padding-bottom: 11.5px;
   box-sizing: border-box;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
   font-weight: 400;
   font-size: 14px;
-  line-height: 16.94px;
+  line-height: 17px;
   font-family: inherit;
   margin-bottom: 17px;
-  padding: 0;
+
 }
 
 .form__text::placeholder {
   font-size: 14px;
-  line-height: 16.94px;
+  line-height: 17px;
   font-family: inherit;
   color: #000;
 }
