@@ -1,5 +1,13 @@
-.profile__text{
+/*.profile__text{
   align-self: center;
   display: flex;
   flex-direction: column;
+}
+*/
+.profile__text{
+  display: grid;
+  grid-template-areas:'name batton'
+                      'disc disc';
+  align-items: center;
+  align-content: center;
 }

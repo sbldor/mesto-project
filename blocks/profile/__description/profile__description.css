@@ -4,6 +4,7 @@
   font-size: 18px;
   line-height: 21.78px;
   margin: 0;
+  grid-area: disc;
 }
 
 @media screen and (max-width: 619px) {
@@ -14,3 +15,5 @@
   padding-bottom: 36px;
   }
 }
+
+

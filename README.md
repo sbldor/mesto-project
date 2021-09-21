@@ -10,6 +10,9 @@ register, find a cool place based on photos, go on vacation)
 3.  BEM methodology.
 4.  html semantics.
 5.  html form
+6.  js
+----
+implemented functionality: editing a profile, opening and closing a pop-up, adding a new card, deleting, likes.
 ----
 #### link
 https://sbldor.github.io/mesto-project/

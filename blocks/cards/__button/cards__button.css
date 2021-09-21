@@ -11,7 +11,7 @@
   width: 22px;
   height: 19px;
   border: 0;
-  transition: background-image, opacity .3s ease;
+  transition: all .3s ease;
 }
 
 .cards__button:hover {

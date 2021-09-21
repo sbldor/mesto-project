@@ -17,17 +17,39 @@
     <img src="./images/logo/logo.svg" alt="лого" class="header__logo">
   </header>
 
-  <section class="popup">
+  <section class="popup" id="popuplogin">
     <div class="popup__container">
       <button class="popup__button-closed" type="button"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
       <form action="#" class="form" name="form">
         <label for="name"></label>
-        <input type="text" class="form__text" id="name" name="name" placeholder="Жак-Ив Кусто" required>
+        <input type="text" class="form__text" value="Жак-Ив Кусто" id="name" name="name" placeholder="Имя" required>
         <label for="description"></label>
-        <input type="text" class="form__text" id="description" name="description" placeholder="Исследователь океана" required>
+        <input type="text" class="form__text" value="Исследователь океана" id="description" name="description" placeholder="О себе" required>
         <input type="submit" class="form__button" value="Сохранить">
       </form>
+    </div>
+  </section>
+
+  <section class="popup" id="popupcards">
+    <div class="popup__container">
+      <button class="popup__button-closed" type="button"></button>
+      <h2 class="popup__title">Новое место</h2>
+      <form action="#" class="form" name="formcard">
+        <label for="name"></label>
+        <input type="text" class="form__text" value="" id="cardname" name="name" placeholder="Название" required>
+        <label for="description"></label>
+        <input type="text" class="form__text" value="" id="cardlink" name="description" placeholder="Ссылка на картинку" required>
+        <input type="submit" class="form__button" value="Сохранить">
+      </form>
+    </div>
+  </section>
+
+  <section class="popup" id="popupcardsopen">
+    <div class="popup__container-image">
+      <button class="popup__button-closed" type="button"></button>
+      <img class="popup__image" src="" alt="Картинка">
+      <p class="popup__image-title"></p>
     </div>
   </section>
 
@@ -37,7 +59,8 @@
       <div class="profile__info">
         <img src="./images/profile/avatar.png" alt="аватарка" class="profile__avatar">
         <div class="profile__text">
-          <h1 class="profile__name">Жак-Ив Кусто<button class="profile__button-edit" type="button"></button></h1>
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button class="profile__button-edit" type="button"></button>
           <p class="profile__description">Исследователь океана</p>
         </div>
       </div>
@@ -47,48 +70,16 @@
     </section>
 
     <section class="cards">
-      <article class="cards__card">
-        <img src="./images/cards/karachev.png" alt="Карачевск" class="cards__image">
-        <div class="cards__bottom-panel">
-          <h2 class="cards__name">Карачевск</h2>
-          <button class="cards__button cards__button_active" type="button"></button>
-        </div>
-      </article>
-      <article class="cards__card">
-        <img src="./images/cards/elbrus.png" alt="Гора Эльбрус" class="cards__image">
-        <div class="cards__bottom-panel">
-          <h2 class="cards__name">Гора Эльбрус</h2>
-          <button class="cards__button" type="button"></button>
-        </div>
-      </article>
-      <article class="cards__card">
-        <img src="./images/cards/dombay.png" alt="Домбай" class="cards__image">
-        <div class="cards__bottom-panel">
-          <h2 class="cards__name">Домбай</h2>
-          <button class="cards__button" type="button"></button>
-        </div>
-      </article>
-      <article class="cards__card">
-        <img src="./images/cards/elbrus.png" alt="Гора Эльбрус" class="cards__image">
-        <div class="cards__bottom-panel">
-          <h2 class="cards__name">Гора Эльбрус</h2>
-          <button class="cards__button" type="button"></button>
-        </div>
-      </article>
-      <article class="cards__card">
-        <img src="./images/cards/dombay.png" alt="Домбай" class="cards__image">
-        <div class="cards__bottom-panel">
-          <h2 class="cards__name">Домбай</h2>
-          <button class="cards__button" type="button"></button>
-        </div>
-      </article>
-      <article class="cards__card">
-        <img src="./images/cards/karachev.png" alt="Карачевск" class="cards__image">
-        <div class="cards__bottom-panel">
-          <h2 class="cards__name">Карачаево-Чувашия</h2>
-          <button class="cards__button" type="button"></button>
-        </div>
-      </article>
+       <template id="cards">
+        <article class="cards__card">
+          <button class="cards__button-delite" type="button"></button>
+          <img src="./images/cards/karachev.png" alt="Картинка" class="cards__image">
+          <div class="cards__bottom-panel">
+            <h2 class="cards__name">Карачевск</h2>
+            <button class="cards__button" type="button"></button>
+          </div>
+        </article>
+      </template>
     </section>
 
   </main>
@@ -97,5 +88,6 @@
     <p class="footer__title">&copy; 2020 Mesto Russia by Andrey Sydor</p>
   </footer>
 
+  <script src="index.js"></script>
 </body>
 </html>

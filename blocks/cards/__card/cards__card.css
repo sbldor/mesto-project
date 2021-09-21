@@ -1,8 +1,9 @@
 .cards__card {
+  position: relative;
   box-sizing: border-box;
   border-radius: 10px;
-  max-width: 282px;
-  max-height: 361px;
+  width: 282px;
+  height: 361px;
   display: flex;
   flex-direction: column;
 }
