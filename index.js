@@ -24,15 +24,14 @@ function handleProfileFormSubmit (evt) {
   nameProfile.textContent = nameInput.value;
   jobProfile.textContent = jobInput.value;
   closedPopup(popupEdit);
-  };
-formEditElement.addEventListener('submit', handleProfileFormSubmit);
-// Функция открытия попапа профиля с значениями из профиля
-function addEditPopup() {
- popupEdit.classList.add('popup_opened');
- nameInput.value = nameProfile.textContent;
- jobInput.value = jobProfile.textContent;
 };
-buttonOpenEdit.addEventListener('click', addEditPopup);
+formEditElement.addEventListener('submit', handleProfileFormSubmit);
+// Слушатель открытия попапа профиля с значениями из профиля
+buttonOpenEdit.addEventListener('click', () => {
+addPopup(popupEdit);
+nameInput.value = nameProfile.textContent;
+jobInput.value = jobProfile.textContent;
+});
 // Слушател,закрытия попапа профиля
 buttonEditClosed.addEventListener('click', () => closedPopup(popupEdit));
 // Массив дефолтных карточек
@@ -63,7 +62,8 @@ const initialCards = [
 }
 ];
 
-const popupCardsOpen = document.getElementById('popupcardsopen')
+const popupCardsOpen = document.getElementById('popupcardsopen');
+const buttonClocedPopupFullPhoto = popupCardsOpen.querySelector('.popup__button-closed');
 const cardsContainer = document.querySelector('.cards');
 const formCardElement = popupCards.querySelector('.form');
 const cardNameInput = document.getElementById('cardname');
@@ -79,12 +79,10 @@ function createCard(cardPhotoLink, cardName) {
   newName.textContent = cardName;
 // Открытие попапа с увеличением фото
   newPhoto.addEventListener('click', () => {
-    const buttonClocedPopupFullPhoto = popupCardsOpen.querySelector('.popup__button-closed');
     popupCardsOpen.querySelector('.popup__image').src = cardPhotoLink;
     popupCardsOpen.querySelector('.popup__image').alt = cardName;
     popupCardsOpen.querySelector('.popup__image-title').textContent = cardName;
     addPopup(popupCardsOpen);
-    buttonClocedPopupFullPhoto.addEventListener('click', () => closedPopup(popupCardsOpen));
   });
 // Лайк карточки
   cardsElement.querySelector('.cards__button').addEventListener('click', (evet) => {
@@ -113,3 +111,5 @@ formCardElement.addEventListener('submit', handreCardFormSubmit);
 // Слушатели пoпапа добавления карточки
 buttonAddCards.addEventListener('click', () => addPopup(popupCards));
 buttonCardClosed.addEventListener('click', () => closedPopup(popupCards));
+// Слушатель закрытия попапа с увеличением
+buttonClocedPopupFullPhoto.addEventListener('click', () => closedPopup(popupCardsOpen));
