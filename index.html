@@ -21,12 +21,18 @@
     <div class="popup__container">
       <button class="popup__button-closed" type="button"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form action="#" class="form" name="form">
-        <label for="name"></label>
-        <input type="text" class="form__text" value="Жак-Ив Кусто" id="name" name="name" placeholder="Имя" required>
-        <label for="description"></label>
-        <input type="text" class="form__text" value="Исследователь океана" id="description" name="description" placeholder="О себе" required>
-        <input type="submit" class="form__button" value="Сохранить">
+      <form action="#" class="form" name="form" novalidate>
+        <div class="form__input-container">
+          <label for="name"></label>
+          <input type="text" minlength="2" maxlength="40" class="form__text" value="Жак-Ив Кусто" id="name" name="name" placeholder="Имя" required>
+          <span class="form__text-error" id="name-error"></span>
+        </div>
+        <div class="form__input-container">
+          <label for="description"></label>
+          <input type="text" minlength="2" maxlength="200" id="description" class="form__text" value="Исследователь океана" id="description" name="description" placeholder="О себе" required>
+          <span class="form__text-error" id="description-error"></span>
+        </div>  
+          <button type="submit" class="form__button" value="Сохранить">Сохранить</button>
       </form>
     </div>
   </section>
@@ -36,11 +42,17 @@
       <button class="popup__button-closed" type="button"></button>
       <h2 class="popup__title">Новое место</h2>
       <form action="#" class="form" name="formcard">
-        <label for="name"></label>
-        <input type="text" class="form__text" value="" id="cardname" name="name" placeholder="Название" required>
-        <label for="description"></label>
-        <input type="text" class="form__text" value="" id="cardlink" name="description" placeholder="Ссылка на картинку" required>
-        <input type="submit" class="form__button" value="Сохранить">
+        <div class="form__input-container">
+          <label for="name"></label>
+          <input type="text" minlength="2" maxlength="30" class="form__text" value="" id="cardname" name="cardname" placeholder="Название" required>
+          <span class="form__text-error" id="cardname-error"></span>
+        </div>  
+        <div class="form__input-container">
+          <label for="description"></label>
+          <input type="url" class="form__text" value="" id="cardlink" name="cardlink" placeholder="Ссылка на картинку" required>
+          <span class="form__text-error" id="cardlink-error"></span>
+        </div>
+        <button type="submit" class="form__button" value="Создать">Создать</button>
       </form>
     </div>
   </section>

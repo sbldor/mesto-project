@@ -6,6 +6,10 @@
   margin: 0;
   padding-bottom: 16px;
   grid-area: name;
+  max-width: 450px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 619px) {
@@ -14,6 +18,7 @@
     line-height: 32.68px;
     margin-left: 34px;
     padding-bottom: 14px;
+    max-width: 250px;
   }
 }
 
