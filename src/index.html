@@ -7,14 +7,14 @@
   <meta name="description" content="Mesto">
   <meta name="keywords" content="HTML5, CSS3, Flex, Gridlayout, Form">
   <meta name="author" content="Andrey Sydor">
-  <link rel="stylesheet" href="./pages/index.css">
+
   <title>Mesto</title>
 </head>
 
 <body class= "page">
 
   <header class="header">
-    <img src="./images/logo/logo.svg" alt="лого" class="header__logo">
+    <img src="<%=require('./images/logo/logo.svg')%>" alt="лого" class="header__logo">
   </header>
 
   <section class="popup" id="popupedit">
@@ -64,12 +64,12 @@
       <p class="popup__image-title"></p>
     </div>
   </section>
-
+  
   <main class="content">
 
     <section class="profile">
       <div class="profile__info">
-        <img src="./images/profile/avatar.png" alt="аватарка" class="profile__avatar">
+        <img src="<%=require('./images/profile/avatar.png')%>" alt="аватарка" class="profile__avatar">
         <div class="profile__text">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
           <button class="profile__button-edit" type="button"></button>
@@ -77,15 +77,15 @@
         </div>
       </div>
       <button class="profile__button-add" type="button">
-        <img src="./images/profile/button-add.svg" alt="кнопка" class="profile__plus">
+        <img src="<%=require('./images/profile/button-add.svg')%>" alt="кнопка" class="profile__plus">
       </button>
     </section>
 
     <section class="cards">
-       <template id="cards">
+      <template id="cards">
         <article class="cards__card">
           <button class="cards__button-delite" type="button"></button>
-          <img src="./images/cards/karachev.png" alt="" class="cards__image">
+          <img src="<%=require('./images/cards/karachev.png')%>" alt="" class="cards__image">
           <div class="cards__bottom-panel">
             <h2 class="cards__name">Карачевск</h2>
             <button class="cards__button" type="button"></button>
@@ -99,7 +99,5 @@
   <footer class="footer">
     <p class="footer__title">&copy; 2020 Mesto Russia by Andrey Sydor</p>
   </footer>
-
-  <script src="index.js"></script>
 </body>
 </html>
