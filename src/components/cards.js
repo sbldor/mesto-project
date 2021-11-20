@@ -1,5 +1,5 @@
-import { addPopup } from "./modal"
-const popupCardsOpen = document.getElementById('popupcardsopen');
+import { openPopup } from "./modal"
+const popupCardsOpen = document.getElementById('popup-cards-open');
 // * Функция обработки информации карточек
 const cardsTemplate = document.querySelector('#cards').content;
 export function createCard(cardPhotoLink, cardName) {
@@ -14,7 +14,7 @@ export function createCard(cardPhotoLink, cardName) {
       popupCardsOpen.querySelector('.popup__image').src = cardPhotoLink;
       popupCardsOpen.querySelector('.popup__image').alt = cardName;
       popupCardsOpen.querySelector('.popup__image-title').textContent = cardName;
-      addPopup(popupCardsOpen);
+      openPopup(popupCardsOpen);
    });
    // Лайк карточки
    cardsElement.querySelector('.cards__button').addEventListener('click', (evet) => {
