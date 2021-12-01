@@ -59,6 +59,7 @@ function toggleLike (evt, card, counter) {
             target.classList.remove('cards__button_active')
             counter.textContent = res.likes.length
          })
+         .catch(err => console.log(err))
    } else {
       addCardLike(id)
          .then(res => {

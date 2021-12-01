@@ -40,7 +40,7 @@ let user;
 Promise.all([getCardData(), getProfileData()])
   .then(([cards, userData]) => {
     cards.forEach(card => {
-      addCardData(createCard(card, userData));
+      cardsContainer.append(createCard(card, userData));
     })
     addProfileData(userData.name, userData.about);
     addAvatarData(userData.avatar)
@@ -100,12 +100,12 @@ function handreCardFormSubmit (evt) {
   }
   addNewCard(data)
     .then(card => {
-      addCardData(createCard(card, user));
+      cardsContainer.prepend(createCard(card, user));
       formCardElement.reset();
       closePopup();
     })
     .catch(err => console.log(err))
-    .finally(() => submitButtonEdit.textContent = 'Создать')
+    .finally(() => submitButtonAdd.textContent = 'Создать')
 };
 formCardElement.addEventListener('submit', handreCardFormSubmit);
 
@@ -116,11 +116,6 @@ buttonAddCards.addEventListener('click', () => {
   formCardElement.reset();
   openPopup(popupCards);
 })
-
-// * Функция вставки карточки
-function addCardData (cards) {
-  cardsContainer.append(cards)
-}
 
 // * Функция замены аватара
 function handreavatarFormSubmit(evt) {
@@ -134,7 +129,7 @@ function handreavatarFormSubmit(evt) {
       closePopup();
     })
     .catch(err => console.log(err))
-    .finally(() => submitButtonEdit.textContent = 'Сохранить')
+    .finally(() => submitButtonAvatar.textContent = 'Сохранить')
 }
 formAvararElement.addEventListener('submit', handreavatarFormSubmit)
 
