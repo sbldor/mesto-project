@@ -1,17 +1,5 @@
 .cards__button_active{
-  background-image: url(../../../../images/cards/like-black.svg);
-  background-color: rgba(0, 0, 0, .0);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 30px;
-  margin-left: 20px;
-  width: 22px;
-  height: 19px;
-  border: 0;
- transition: all .3s ease;
+  background-image: url('../../../../images/cards/like-black.svg');
 }
 
 .cards__button:hover {

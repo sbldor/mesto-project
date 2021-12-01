@@ -6,8 +6,15 @@
 */
 .profile__text{
   display: grid;
-  grid-template-areas:'name batton'
-                      'disc disc';
+  grid-template-areas:'name batton .'
+                      'disc disc disc';
   align-items: center;
   align-content: center;
+}
+
+@media screen and (max-width: 619px) {
+  .profile__text {
+    grid-template-areas:'name batton'
+                      'disc disc';
+  }
 }

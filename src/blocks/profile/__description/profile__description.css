@@ -5,19 +5,17 @@
   line-height: 21.78px;
   margin: 0;
   grid-area: disc;
-  max-width: 450px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  max-width: 430px;
+  max-height: 500px;
 }
 
 @media screen and (max-width: 619px) {
   .profile__description {
-  font-size: 14px;
-  line-height: 16.94px;
-  text-align: center;
-  padding-bottom: 36px;
-  max-width: 250px;
+    font-size: 14px;
+    line-height: 16.94px;
+    text-align: center;
+    padding-bottom: 36px;
+    max-width: 250px;
   }
 }
 

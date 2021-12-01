@@ -13,6 +13,7 @@ register, find a cool place based on photos, go on vacation)
 6.  js
 7.  webpack
 8.  validation forms with js
+9.  server
 ----
 implemented functionality: editing a profile, opening and closing a pop-up, adding a new card, deleting, likes.
 ----

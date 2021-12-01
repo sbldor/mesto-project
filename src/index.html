@@ -65,15 +65,32 @@
     </div>
   </section>
   
+  <section class="popup" id="popup-avatar">
+    <div class="popup__container popup__container_avatar">
+      <button class="popup__button-closed" type="button"></button>
+      <h2 class="popup__title popup__title_avatar">Обновить аватар</h2>
+      <form action="#" class="form" name="form" novalidate>
+        <div class="form__input-container">
+          <label for="avatar"></label>
+          <input type="url" class="form__text" value="" id="avatar" name="avatar" placeholder="Ссылка на аватар" required>
+          <span class="form__text-error" id="avatar-error"></span>
+        </div>
+        <button type="submit" class="form__button" value="Сохранить">Сохранить</button>
+      </form>
+    </div>
+  </section>
+
   <main class="content">
 
     <section class="profile">
       <div class="profile__info">
-        <img src="<%=require('./images/profile/avatar.png')%>" alt="аватарка" class="profile__avatar">
-        <div class="profile__text">
-          <h1 class="profile__name">Жак-Ив Кусто</h1>
+        <div class="profile__avatar-container">
+          <img src="<%=require('./images/profile/avatar.png')%>" alt="аватарка" class="profile__avatar">
+        </div>
+          <div class="profile__text">
+          <h1 class="profile__name"></h1>
           <button class="profile__button-edit" type="button"></button>
-          <p class="profile__description">Исследователь океана</p>
+          <p class="profile__description"></p>
         </div>
       </div>
       <button class="profile__button-add" type="button">
@@ -87,9 +104,11 @@
           <button class="cards__button-delite" type="button"></button>
           <img src="<%=require('./images/cards/karachev.png')%>" alt="" class="cards__image">
           <div class="cards__bottom-panel">
-            <h2 class="cards__name">Карачевск</h2>
-            <button class="cards__button" type="button"></button>
-          </div>
+            <h2 class="cards__name">Карачевск</h2> 
+            <div class="cards__like-container">
+              <button class="cards__button" type="button"></button>
+              <p class="cards__counter">0</p>
+            </div>
         </article>
       </template>
     </section>
